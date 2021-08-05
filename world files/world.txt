@@ -1,0 +1,456 @@
+// File: world.txt
+// Data file for SeaPort projects
+// Date: Fri Jun 01 16:30:10 EST 2019
+// parameters: 1 1 5 5 1 5 
+// ports, docks, pships, cships, jobs, persons
+
+// port name index parent(null)
+// port <String> <int> <int> port 
+port PortofNewYorkandNewJersey 10000 0
+port Singapore 10001 0
+port King_Abdullah 10002 0
+
+// dock name index parent(port)
+// dock <string> <int> <int>
+dock Pier_99 1201 10000 01256
+dock Pier_88 1101 10000 01293
+dock RedHookContainerTerminal 1501 10000 00809
+dock ManhattanCruiseTerminal 1301 10000 00894
+dock MaherTerminal 1401 10000 00812
+
+dock Pier_Sing2 2051 10001 30154 
+dock Pier_Sing3 2087 10001 40039
+dock Pier_Sing1 2032 10001 30107
+dock Pier_Sing4 2060 10001 40124
+
+dock Pier_Ab2 3081 10002 30032
+dock Pier_Ab1 3091 10002 40022
+dock Pier_Ab3 3031 10002 40041
+dock Pier_Ab6 3021 10002 40088
+dock Pier_Ab4 3071 10002 40072
+dock Pier_Ab5 3051 10002 40018
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+// pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+pship	Santos 01293 1101 125.99 234.70 60.67 37.14 746 246 246
+pship	Cruzfair 01256 1201 126.38 358.27 74.12 31.54 3768 979 979
+pship	Boston 01233 10000 134.41 156.96 120.31 35.20 1673 633 633
+pship	StatenIsland 01291 10000 86.74 450.43 33.13 41.67 2143 920 920
+pship	Pepperdine 00857 10000 149.85 483.92 125.71 31.21 166 409 83
+pship  	Sequences 30087 10001 233.98 423.67 76.22 17.22 1 194 0
+pship  	Theory 30002 10001 55.50 238.06 127.47 17.18 1282 804 641
+pship  	Encaged 30015 10002 95.54 414.98 95.74 15.38 1408 1014 704
+pship  	Ashen 30056 100002 98.93 270.51 85.70 40.35 23 279 11
+pship  	Cultivation 30107 2032 198.15 302.67 71.85 24.01 273 908 136
+pship	Prig 30154 2051 54.06 158.61 52.53 29.24 147 344 73
+pship   Deselected 30095 20097 103.56 320.89 99.49 16.04 265 825 132
+pship   Flayed 30032 3081 75.93 490.38 101.26 43.27 5 231 2
+pship   Intelligently 30103 10001 170.77 229.38 120.70 42.05 295 524 147
+pship   Medials 30144 10001 248.62 167.62 35.28 29.76 9 128 4
+pship   Reminiscence 10340 10000 215.69 144.45 120.85 36.53 2968 825 825
+pship   Camellias 50031 10003 188.01 219.79 45.56 35.72 28 907 14
+pship   Alders 30044 10001 124.88 233.23 38.10 28.90 2707 928 928
+pship   Healthfully 30060 10000 116.80 326.46 72.31 40.26 1538 784 769
+pship   Toughies 30090 10002 54.12 469.62 98.59 30.95 2917 1086 1086
+pship   Lumper 30025 10002 84.61 372.77 80.15 37.56 562 461 281
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+// cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+cship	Manhattan 00894 1301 219.92 443.54 104.44 34.16 86.69 139.89 813.72
+cship	Barcelona 00812 1401 120.85 362.55 96.82 19.09 33.08 188.31 261.57
+cship	Arica 00809 1501 79.90 234.26 73.18 15.71 125.27 179.00 729.95
+cship	Shanghai 00899 10000 189.12 448.99 73.97 37.67 88.90 175.03 1002.63
+cship	Rico 00811 10000 200.80 242.33 38.31 23.49 172.73 188.54 235.57
+cship   Orchardman 40000 10000 232.05 194.39 35.20 34.69 163.12 139.92 298.10
+cship   Hypochondriacs 40120 10002 236.23 196.75 72.27 36.95 62.32 167.43 679.04
+cship   Petro 40036 10003 162.44 361.44 43.65 19.58 133.93 158.11 793.22
+cship   Overmasters 40125 10001 152.61 252.56 118.14 16.64 49.70 150.79 346.74
+cship   Hokiest 40077 10002 180.70 148.55 57.93 44.65 55.13 185.21 794.29
+cship   Desecrations 40124 2060 109.41 380.56 93.59 25.70 125.67 166.98 937.24
+cship   Triennially 40018 3051 198.21 288.27 44.86 35.31 26.89 146.04 598.87
+cship   Kettledrum 40039 2087 182.03 330.65 81.33 17.35 169.04 158.20 526.24
+cship   Caudexes 40072 3071 197.64 168.86 107.60 31.22 189.66 193.53 580.03
+cship   Hint 40022 3091 166.61 337.90 64.55 32.20 31.68 197.92 644.14
+cship   Reaccredited 40041 3031 67.76 445.92 112.65 28.44 209.44 188.82 761.38
+cship   Typhons 40088 3021 69.23 394.34 93.71 18.87 184.49 155.88 842.57
+cship   Manoeuvered 40064 10002 162.74 340.65 82.16 43.44 119.57 117.98 708.53
+cship   Arcadian 40131 10001 244.71 301.46 62.77 20.26 63.28 144.02 494.27
+cship   Purim 40012 10002 105.43 411.31 46.69 30.28 116.45 175.31 771.42
+cship   Hawk 40122 10001 232.77 158.85 116.90 15.97 21.54 199.43 711.02
+cship   Reservers 40111 10002 120.38 204.34 69.32 32.04 195.46 176.83 18.64
+cship   Uneasiest 40025 10000 80.21 383.13 36.90 34.37 206.63 120.13 226.53
+cship   Orgeats 40001 10000 117.45 259.96 104.99 22.50 58.00 186.89 23.52
+cship   Documenter 40015 10000 69.84 289.41 96.01 21.21 137.48 184.99 1005.84
+cship   Inofficious 40157 10001 73.13 436.98 74.83 34.67 43.41 115.32 19.45
+
+// person name index parent skill
+// person <string> <int> <int> <string>
+person	Ronald 50101 10000 captain
+
+person	Johnny 50121 10000 electrician
+person	James 50122 10000 electrician
+person	Alfonso 50123 10000 electrician
+person	Alton 50124 10000 electrician
+person	Melissa 50125 10000 electrician
+
+person	Matthew 50141 10000 inspector
+person	Phil 50142 10000 inspector
+person	Ramir 50143 10000 inspector
+
+person	Thomas 50181 10000 cleaner
+person	Phyllis 50182 10000 cleaner
+person	Samantha 50183 10000 cleaner
+person	Theodore 50184 10000 cleaner
+person	Woodrow 50185 10000 cleaner
+
+person	Arnold 50151 10000 clerk
+person	Zachary 50152 10000 clerk
+person	Israel 50153 10000 clerk
+person	Jaime 50154 10000 clerk
+person	Pablo 50155 10000 clerk
+
+person	Anna 50191 10000 janitor
+person	Olive 50192 10000 janitor
+person	Pamela 50193 10000 janitor
+
+person  Maus 50011 10000 crew
+person  Ora 50012 10000 crew
+person  Patsy 50013 10000 crew
+person  Ramira 50014 10000 crew
+person  Caroline 50015 10000 crew
+person  Cathy 50016 10000 crew
+
+person	Matthew 50161 10000 stevedore
+person	Cheryl 50162 10000 stevedore
+person	Clarence 50163 10000 stevedore
+person	Damon 50164 10000 stevedore
+person	Eugene 50165 10000 stevedore
+person	Ginger 50166 10000 stevedore
+
+person	Hubert 50181 10000 painter
+person	Ivan 50182 10000 painter
+person	Jared 50183 10000 painter
+person	Joel 50184 10000 painter
+person	Kerry 50185 10000 painter
+
+person	Kristine 50281 10000 mate
+person	Leland 50282 10000 mate
+person	Neal 50283 10000 mate
+person	Nadine 50284 10000 mate
+person	Paulette 50285 10000 mate
+
+person	Ronnie 52121 10000 craneOperator
+person	Raul 50102 10000 craneOperator
+person	Salvador 50103 10000 craneOperator
+
+person	Arnold 50331 10000 driver
+person	Seth 50332 10000 driver
+person	Sharon 50333 10000 driver
+person	Adrienne 50334 10000 driver
+
+person	Anna 50291 10000 engineer
+person	Andrea 50292 10000 engineer
+person	Beverly 50293 10000 engineer
+person	Donna 50294 10000 engineer
+person	Erma 50295 10000 engineer
+
+person  Genevieve 50511 10000 mechanic
+person  Geoffrey 50512 10000 mechanic
+person  Herman 50513 10000 mechanic
+person  Jo 50514 10000 mechanic
+person  Mamie 50515 10000 mechanic
+
+person  Marion 50711 10000 carpenter
+person  Maryann 50712 10000 carpenter
+person  Penny 50713 10000 carpenter
+person  Rebecca 50714 10000 carpenter
+person  Tabitha 50715 10000 carpenter
+
+
+
+
+
+
+person	Toni 40111 10001 captain
+
+person	Velma 40021 10001 electrician
+person	Veronica 40022 10001 electrician
+person	Regina 30025 10001 electrician
+
+person	Ricardo 40112 10001 inspector
+person	Aaron 40113 10001 inspector
+
+person	Alberto 40181 10001 cleaner
+person	Annette 40182 10001 cleaner
+person	Eloise 40183 10001 cleaner
+
+person	Edmund 40151 10001 clerk
+person	Emilio 40152 10001 clerk
+person	Felix 40154 10001 clerk
+person	Frederick 40155 10001 clerk
+
+person	Gene 40191 10001 janitor
+person	Faye 40192 10001 janitor
+person	Blanche 40193 10001 janitor
+
+person  Beulah 40011 10001 crew
+person  Candace 40012 10001 crew
+person  Carlos 40013 10001 crew
+person  Ella 40014 10001 crew
+person  Erin 40015 10001 crew
+person  Gail 40016 10001 crew
+
+person	Allison 40161 10001 stevedore
+person	Alton 40162 10001 stevedore
+person	Elias 40163 10001 stevedore
+person	Essie 40164 10001 stevedore
+person	Faith 40165 10001 stevedore
+person	Felix 40166 10001 stevedore
+
+person	Hubert 40181 10001 painter
+person	Ivan 40182 10001 painter
+person	Jared 40183 10001 painter
+person	Joel 40184 10001 painter
+person	Kerry 40185 10001 painter
+
+person	Garry 40281 10001 mate
+person	Georgia 40282 10001 mate
+person	Jody 40283 10001 mate
+person	Manuel 40284 10001 mate
+person	Oscar 40285 10001 mate
+
+person	Randolph 40101 10001 craneOperator
+person	Preston 40102 10001 craneOperator
+person	Roxanne 40103 10001 craneOperator
+
+person	Russell 40331 10001 driver
+person	Sherman 40332 10001 driver
+person	Sonia 40333 10001 driver
+person	Sue 40334 10001 driver
+
+person	Sylvester 40291 10001 engineer
+person	Irma 40292 10001 engineer
+person	Irvin 40293 10001 engineer
+person	Lance 40294 10001 engineer
+person	Lorraine 40295 10001 engineer
+
+person  Mae 40511 10001 mechanic
+person  Maggie 40512 10001 mechanic
+person  Meghan 40513 10001 mechanic
+person  Ramon 40514 10001 mechanic
+person  Shari 40515 10001 mechanic
+
+person  Sheldon 40711 10001 carpenter
+person  Ted 40712 10001 carpenter
+person  Wilbur 40713 10001 carpenter
+person  Agnes 40714 10001 carpenter
+
+
+
+
+
+
+
+
+person	Alma 30111 10002 captain
+
+person	Alexandra 30021 10002 electrician
+person	Alexis 30022 10002 electrician
+person	Abraham 30023 10002 electrician
+person	Cecil 30024 10002 electrician
+person	Marjorie 30025 10002 electrician
+person	Melanie 30026 10002 electrician
+
+person	Natasha 30111 10002 inspector
+person	Molly 30112 10002 inspector
+person	Mildred 30113 10002 inspector
+person	Marguerite 30114 10002 inspector
+person	Latoya 30115 10002 inspector
+person	Levi 30116 10002 inspector
+
+person	Leo 30181 10002 cleaner
+person	Myrtle 30182 10002 cleaner
+person	Eloise 30183 10002 cleaner
+person	Noel 30184 10002 cleaner
+person	Luther 30185 10002 cleaner
+person	Lindsey 30186 10002 cleaner
+person	Kathleen 30187 10002 cleaner
+person	Mayreen 30188 10002 cleaner
+person	Annie 30189 10002 cleaner
+person	Willy 30291 10002 cleaner
+person	Khalil 30292 10002 cleaner
+person	Lourdes 30293 10002 cleaner
+
+person	Eddy 30151 10002 clerk
+person	Wallace 30152 10002 clerk
+person	Jane 30153 10002 clerk
+person	Omar 30154 10002 clerk
+person	Telusko 30155 10002 clerk
+person	Patel 30156 10002 clerk
+person	Harley 30157 10002 clerk
+person	Marcy 30158 10002 clerk
+person	Grieg 30159 10002 clerk
+person	Michael 31151 10002 clerk
+person	Ben 31152 10002 clerk
+person	Andrew 31153 10002 clerk
+person	Kyle 31154 10002 clerk
+person	Joe 31155 10002 clerk
+person	Dave 31156 10002 clerk
+person	Dee 31157 10002 clerk
+
+person	Janet 30091 10002 janitor
+person	Gary 30092 10002 janitor
+person	Bob 30093 10002 janitor
+person	Patrick 30094 10002 janitor
+person	Megan 30095 10002 janitor
+person	Steve 30096 10002 janitor
+person	Nicky 30097 10002 janitor
+person	Donald 30098 10002 janitor
+person	Mike 30099 10002 janitor
+person	Kennedy 31101 10002 janitor
+person	Wang 31002 10002 janitor
+person	Chang 31003 10002 janitor
+person	Long 31004 10002 janitor
+person	Daisuke 31005 10002 janitor
+person	Rooney 31006 10002 janitor
+
+person  Nancy 31111 10002 crew
+person  Candace 31112 10002 crew
+person  Krista 31113 10002 crew
+person  Leland 31114 10002 crew
+person  Lucille 31115 10002 crew
+person  Lorenzo 31116 10002 crew
+person  Orah 31117 10002 crew
+person  Ramiro 31118 10002 crew
+person  Randy 31119 10002 crew
+person  Elly 31121 10002 crew
+person  Eli 31122 10002 crew
+person  Aaron 31123 10002 crew
+person  Jackie 31124 10002 crew
+person  Gale 31125 10002 crew
+person  Kent 31126 10002 crew
+person  Kenny 31127 10002 crew
+person  Gladace 31128 10002 crew
+person  Paula 31129 10002 crew
+person  Gabriella 31131 10002 crew
+person  Melvin 31132 10002 crew
+person  Jairo 31133 10002 crew
+person  Pilar 31134 10002 crew
+person  Olga 31135 10002 crew
+person  Wilfredo 31136 10002 crew
+
+person	Sonya 35161 10002 stevedore
+person	Theresa 35162 10002 stevedore
+person	Tomas 35163 10002 stevedore
+person	Luz 35164 10002 stevedore
+person	Mack 35165 10002 stevedore
+person	Jordan 35166 10002 stevedore
+
+person	Josephine 30181 10002 painter
+person	Karla 30182 10002 painter
+person	Grayson 30183 10002 painter
+person	Kelvin 30184 10002 painter
+person	Mabel 30185 10002 painter
+
+person	Jerry 37281 10002 mate
+person	Kramer 37282 10002 mate
+person	Phoebe 37283 10002 mate
+person	Chandler 37284 10002 mate
+person	Ross 37285 10002 mate
+
+person	Martin 38101 10002 craneOperator
+person	Milton 38102 10002 craneOperator
+person	Bertha 38103 10002 craneOperator
+
+person	Brad 39331 10002 driver
+person	Bruce 39333 10002 driver
+person	Grace 39334 10002 driver
+
+person	Hilda 32291 10002 engineer
+person	Homer 32292 10002 engineer
+person	Jason 32293 10002 engineer
+person	Kelvin 32294 10002 engineer
+person	Kristen 32295 10002 engineer
+
+person  Lana 33311 10002 mechanic
+person  Leah 33312 10002 mechanic
+person  Marion 33313 10002 mechanic
+person  Naomi 33314 10002 mechanic
+person  Opal 33315 100012 mechanic
+person  Shannon 34411 10002 carpenter
+person  Stephen 34412 10002 carpenter
+person  Cassandra 34413 10002 carpenter
+person  Chelsea 34414 10002 carpenter
+
+
+// job name index parent duration [skill]* (zero or more, matches skill in person, may repeat)
+// job <string> <int> <int> <double> [<string>]*
+job Job_40_50_60 60121 1101 270.34 captain janitor
+job Job_40_50_61 60122 1101 89.06 janitor cleaner
+job Job_40_50_62 60123 1201 150.34 electrician mechanic
+job Job_40_50_63 60124 1201 270.34 captain crew mate
+job Job_40_50_64 60125 1501 89.06 janitor cleaner painter
+job Job_40_50_65 60126 1301 150.34 inspector clerk electrician 
+job Job_40_50_66 60127 1401 270.34 captain carpenter
+job Job_40_50_67 60128 2051 89.06 cleaner electrician painter
+job Job_40_50_69 60129 2051 140.34 driver
+job Job_40_50_70 60131 2087 150.34 stevedore
+job Job_40_50_71 60132 2087 160.34 mechanic
+
+job Job_49_51_60 60221 2032 270.34 captain engineer
+job Job_49_51_61 60222 2032 239.06 janitor cleaner painter
+job Job_49_51_62 60223 2060 250.39 electrician mechanic
+job Job_49_51_63 60224 3081 100.89 captain crew painter
+job Job_49_51_64 60225 3091 49.76 janitor cleaner mate
+job Job_49_51_65 60226 3031 450.67 inspector clerk crew 
+job Job_49_51_66 60227 3021 670.75 captain janitor painter
+job Job_49_51_67 60228 3071 45.09 cleaner electrician
+job Job_49_51_68 60229 3051 125.01 electrician clerk
+
+job Job_40_51_69 60231 01233 376.93 captain janitor painter
+job Job_40_51_70 60232 01233 321.44 janitor cleaner mate
+
+job Job_40_51_71 60233 01291 179.01 electrician engineer
+job Job_40_51_72 60234 00857 111.11 stevedore captain crew
+job Job_40_51_73 60235 30087 89.06 janitor cleaner mechanic
+job Job_40_51_74 60236 30002 79.34 stevedore clerk electrician 
+job Job_40_51_75 60237 30015 91.91 captain janitor painter
+job Job_40_51_76 60238 30056 31.46 cleaner electrician
+job Job_40_51_77 60239 30056 477.47 stevedore clerk
+
+job Job_43_56_60 60321 01291 233.34 captain janitor
+job Job_43_56_61 60322 30095 89.06 janitor cleaner
+job Job_43_56_62 60323 30032 150.34 electrician stevedore
+job Job_43_56_63 60324 30103 270.34 captain crew craneOperator
+job Job_43_56_64 60325 30144 89.06 janitor cleaner
+job Job_43_56_65 60326 10340 150.34 inspector stevedore
+job Job_43_56_66 60327 50031 270.34 captain clerk electrician 
+job Job_43_56_67 60328 30044 839.06 cleaner electrician
+job Job_43_56_68 60329 30060 150.34 electrician clerk
+job Job_43_56_69 60331 30090 703.34 captain janitor
+job Job_43_56_70 60332 30025 789.06 janitor cleaner
+
+job Job_43_56_71 60333 00899 150.34 electrician janitor
+job Job_43_56_72 60334 00811 270.34 captain crew
+job Job_43_56_73 60335 40000 275.06 janitor cleaner
+job Job_43_56_74 60336 40120 923.34 inspector electrician 
+job Job_43_56_75 60337 40036 270.34 captain stevedore
+job Job_43_56_76 60338 40125 891.06 cleaner electrician
+job Job_43_56_77 60339 40077 222.34 electrician clerk
+job Job_43_56_78 60341 40124 270.34 captain janitor
+job Job_43_56_79 60342 40018 111.06 mate stevedore
+job Job_43_56_80 60343 40039 673.34 mate craneOperator
+job Job_43_56_81 60344 40072 220.34 crew driver
+job Job_43_56_82 60345 40022 389.06 crew janitor
+job Job_43_56_83 60346 40041 450.34 driver painter
+job Job_43_56_84 60347 40088 270.34 painter janitor
+job Job_43_56_85 60348 40064 189.06 stevedore craneOperator
+job Job_43_56_86 60349 40131 130.34 craneOperator driver
+
+job Job_41_56_01 65343 40012 673.34 mate craneOperator
+job Job_41_56_02 65344 40122 220.34 crew driver
+job Job_41_56_03 65345 40111 389.06 crew janitor
+job Job_41_56_04 65346 40025 450.34 driver painter
+job Job_41_56_05 65347 40001 270.34 painter janitor
+job Job_41_56_07 65348 40015 189.06 stevedore craneOperator
+job Job_41_56_08 65349 40157 130.34 craneOperator driver
