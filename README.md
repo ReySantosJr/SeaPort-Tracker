@@ -4,3 +4,8 @@ reads and scans the “world” .txt file and can display the seaports, cargo an
 
 The program can sort the data alphabetically or by key and can be displayed in regular output text or through a tree. 
 The level of inheritance are shown by the three ‘main’ classes using the titled SeaPortTrackerOne, SeaPortTrackerTwo, and SeaPortTrackerThree.
+
+A Jar file is provided,
+
+**8/5/21 - uploaded to GitHub**
+- Source code and jar file is uploaded
